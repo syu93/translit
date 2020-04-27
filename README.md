@@ -1,7 +1,7 @@
 # Translit
 A simple really small i18n library with a intuitive API.
 
-## Feature
+## Features
 
 * Dependency free
 * Really small
