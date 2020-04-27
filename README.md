@@ -1,5 +1,9 @@
 # Translit
 A simple really small i18n library with a intuitive API.
+<div align="center">
+	<a href="https://bundlephobia.com/result?p=@syu93/translit@1.0.0"><img src="https://badgen.net/bundlephobia/minzip/@syu93/translit" alt="size"></a>
+    <a href=""><img src="https://badgen.net/npm/v/@syu93/translit" alt="version"></a>
+</div>
 
 ## Features
 
