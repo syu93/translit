@@ -22,6 +22,9 @@ export default class Translit {
    */
   setLocale(lang) {
     this.locale = lang;
+    if (this.requestUpdate) this.requestUpdate();
+    const event = new CustomEvent('update-text');
+    document.dispatchEvent(event);
   }
 
   /**
