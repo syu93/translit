@@ -144,7 +144,7 @@ render() {
 
 Dynamically change the locale translation.
 
-### addLocale( translation : Object )
+### addLocale( translation : Object )
 
 **Translation** :  A translation object.
 
