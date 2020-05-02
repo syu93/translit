@@ -149,22 +149,30 @@ render() {
 
 ## API
 
+
+
 ### Translit( config : Object )
 
-* **Translation**: An object containing the translation.
-* **Locale**, the current locale used for translation.
+* **Translation** : An object containing the translation.
+* **Locale** :  The current locale used for translation.
+
+
 
 ### setLocale( locale : String )
 
-**Locale **: The language string.
+**Locale ** : The language string.
 
 Dynamically change the locale translation.
+
+
 
 ### addLocale( translation : Object )
 
 **Translation** :  A translation object.
 
 Dynamically add a new translation.
+
+
 
 ### t( translation : String, data : Any, locale : String )
 
