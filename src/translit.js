@@ -39,7 +39,7 @@ export default class Translit {
    * Translate a given string from the translation object
    * @param {String} translation A string representing the path for the translation
    * @param {*} data The data to be passed the translate function
-   * @param {String} locale The language of the translation (override the default localde)
+   * @param {String} locale The locale of the translation (override the default locale)
    */
   t(translation, data, locale = false) {
     try {
