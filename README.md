@@ -149,7 +149,7 @@ render() {
 
 ## API
 
-### Translit( config : Object )
+### Translit( config : Object )
 
 * **Translation**: An object containing the translation.
 * **Locale**, the current locale used for translation.
