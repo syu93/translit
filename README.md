@@ -137,3 +137,36 @@ render() {
 }
 ```
 
+
+
+## API
+
+### Translit( config : Object )
+
+* **Translation**: An object containing the translation
+* **Locale**, the current locale used for translation.
+
+### setLocale( locale : String )
+
+**Locale **: The language string
+
+Dynamically change the locale translation.
+
+### addLocale( translation : Object )
+
+**Translation** :  A translation object
+
+Dynamically add a new translation.
+
+### t( translation : String, data : Any, locale : String )
+
+**Translation** : A string representing the path for the translation
+**Data** : The data to be passed the translate function
+**Locale** : The locale of the translation (override the default locale)
+
+
+
+
+
+
+

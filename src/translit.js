@@ -4,26 +4,26 @@
 export default class Translit {
 
   /**
-   * TranLit is the simpliest way I found to do I18n
-   * @param {Object} Tranlation: An objet containing the tranlation, local, the current local used for tranlation
+   * TransLit is the simpliest way I found to do I18n
+   * @param {Object} Tranlation: An object containing the translation, local, the current local used for translations
    */
   constructor({ locale, translation }) {
     this.translation = translation || {};
     this.locale = locale || 'en';
     // Registore for custom element
-    if (typeof maybeObject != "undefined" && 'HTMLElement' in window) {
+    if (typeof window != "undefined" && 'HTMLElement' in window) {
       HTMLElement.prototype.t = this.t.bind(this);
     }
   }
 
   /**
-   * Dynamically change the local string
+   * Dynamically change the locale translation
    * @param {String} lang The language string
    */
   setLocale(lang) {
     this.locale = lang;
     if (this.requestUpdate) this.requestUpdate();
-    const event = new CustomEvent('update-text');
+    const event = new CustomEvent('translit-update-locale');
     document.dispatchEvent(event);
   }
 
@@ -39,11 +39,11 @@ export default class Translit {
    * Translate a given string from the translation object
    * @param {String} translation A string representing the path for the translation
    * @param {*} data The data to be passed the translate function
-   * @param {String} language The language for the translation
+   * @param {String} locale The language of the translation (override the default localde)
    */
-  t(translation, data, language = false) {
+  t(translation, data, locale = false) {
     try {
-      const message = translation.split('.').reduce((o, i) => o[i], this.translation[language || this.locale]);
+      const message = translation.split('.').reduce((o, i) => o[i], this.translation[locale || this.locale]);
       if (!message) {
         console.warn(`[TransLit] No tranation found for ${translation}`);
         return translation;
