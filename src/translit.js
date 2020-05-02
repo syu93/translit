@@ -1,5 +1,5 @@
 /**
- * A simple really small i18n library with a intuitive API.
+ * A simple really small i18n library with intuitive API.
  */
 export default class Translit {
 

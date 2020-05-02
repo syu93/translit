@@ -1,7 +1,7 @@
 {
   "name": "@syu93/translit",
   "version": "1.1.0",
-  "description": "A simple really small i18n library with a intuitive API.",
+  "description": "A simple really small i18n library with intuitive API.",
   "esnext": "dist-src/index.js",
   "main": "pkg/dist-src/index.js",
   "module": "pkg/dist-src/index.js",

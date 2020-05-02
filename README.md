@@ -1,5 +1,5 @@
 # Translit
-A simple really small i18n library with a intuitive API.
+A simple really small i18n library with intuitive API.
 <div align="center">
 	<a href="https://bundlephobia.com/result?p=@syu93/translit"><img src="https://badgen.net/bundlephobia/minzip/@syu93/translit" alt="size"></a>
     <a href="https://www.npmjs.com/package/@syu93/translit"><img src="https://badgen.net/npm/v/@syu93/translit" alt="version"></a>
@@ -66,6 +66,14 @@ Or you can dynamically change the locale using the `setLocale` method
 i18n.setLocale('fr');
 ```
 
+Or you can even set  the locale as you use it
+
+```javascript
+i18n.t('hello.wold', null, 'en');
+```
+
+
+
 You can as well load another locale with the `addLocale` method
 
 ```javascript
@@ -82,7 +90,7 @@ i18n.addLocale({
 
 ### Simple translation
 
-Define a JSON of translation and use the path as a Sting to access the translation
+Define a JSON of translation and use the path as a string to access the translation.
 
 ```javascript
 const i18n = new Translit({
@@ -95,7 +103,7 @@ const i18n = new Translit({
   } 
 });
 
-console.log(i18n.t('hello.world'))
+console.log(i18n.t('hello.world'));
 // => Hello world
 ```
 
@@ -103,7 +111,7 @@ console.log(i18n.t('hello.world'))
 
 ## Pluralisation
 
-If you need a more complex translation, with pluralisation for example, you can simple define a method that takes a param and return a string
+If you need a more complex translation, with pluralisation for example, you can simple define a method that takes a param and return a string.
 
 ```javascript
 const i18n = new Translit({
@@ -114,10 +122,10 @@ const i18n = new Translit({
   } 
 });
 
-console.log(i18n.t('itemInList', 1))
+console.log(i18n.t('itemInList', 1));
 // => This list contains 1 item
 
-console.log(i18n.t('itemInList', 2))
+console.log(i18n.t('itemInList', 2));
 // => This list contains 2 items
 ```
 
@@ -143,26 +151,28 @@ render() {
 
 ### Translit( config : Object )
 
-* **Translation**: An object containing the translation
+* **Translation**: An object containing the translation.
 * **Locale**, the current locale used for translation.
 
 ### setLocale( locale : String )
 
-**Locale **: The language string
+**Locale **: The language string.
 
 Dynamically change the locale translation.
 
 ### addLocale( translation : Object )
 
-**Translation** :  A translation object
+**Translation** :  A translation object.
 
 Dynamically add a new translation.
 
 ### t( translation : String, data : Any, locale : String )
 
-**Translation** : A string representing the path for the translation
-**Data** : The data to be passed the translate function
-**Locale** : The locale of the translation (override the default locale)
+**Translation** : A string representing the path for the translation.
+**Data** : The data to be passed the translate function.
+**Locale** : The locale of the translation (override the default locale).
+
+Translate a given string from the translation object.
 
 
 
