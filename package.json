@@ -3,8 +3,8 @@
   "version": "1.1.0",
   "description": "A simple really small i18n library with a intuitive API.",
   "esnext": "dist-src/index.js",
-  "main": "pkg/dist-node/index.js",
-  "module": "pkg/dist-web/index.js",
+  "main": "pkg/dist-src/index.js",
+  "module": "pkg/dist-src/index.js",
   "scripts": {
     "build": "npx pika build",
     "test": "mocha --recursive './test/**/*.js' --require esm"
@@ -39,9 +39,6 @@
             "__tests__/**/*"
           ]
         }
-      ],
-      [
-        "@pika/plugin-build-web"
       ]
     ]
   },
