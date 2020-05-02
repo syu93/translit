@@ -11,15 +11,11 @@ A simple really small i18n library with intuitive API.
 * Really small
 * Compatible with Web Components and **LitElement**
 
-
-
 ## Install
 
 ```bash
 $ npm i @syu93/translit
 ```
-
-
 
 ## Usage
 
@@ -40,8 +36,6 @@ const i18n = new Translit({
 console.log(i18n.t('hello.world'))
 // => Hello world
 ```
-
-
 
 ### Locales
 
@@ -72,8 +66,6 @@ Or you can even set  the locale as you use it
 i18n.t('hello.wold', null, 'en');
 ```
 
-
-
 You can as well load another locale with the `addLocale` method
 
 ```javascript
@@ -85,8 +77,6 @@ i18n.addLocale({
   }
 });
 ```
-
-
 
 ### Simple translation
 
@@ -106,8 +96,6 @@ const i18n = new Translit({
 console.log(i18n.t('hello.world'));
 // => Hello world
 ```
-
-
 
 ## Pluralisation
 
@@ -129,8 +117,6 @@ console.log(i18n.t('itemInList', 2));
 // => This list contains 2 items
 ```
 
-
-
 ### LitElement
 
 To use **Translit** inside a **LitElement**, just call the `this.t` method inside your template
@@ -145,34 +131,24 @@ render() {
 }
 ```
 
-
-
 ## API
-
-
 
 ### Translit( config : Object )
 
 * **Translation** : An object containing the translation.
 * **Locale** :  The current locale used for translation.
 
-
-
 ### setLocale( locale : String )
 
-**Locale ** : The language string.
+**Locale** : The language string.
 
 Dynamically change the locale translation.
-
-
 
 ### addLocale( translation : Object )
 
 **Translation** :  A translation object.
 
 Dynamically add a new translation.
-
-
 
 ### t( translation : String, data : Any, locale : String )
 
@@ -181,10 +157,4 @@ Dynamically add a new translation.
 **Locale** : The locale of the translation (override the default locale).
 
 Translate a given string from the translation object.
-
-
-
-
-
-
 
